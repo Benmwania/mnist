@@ -1,51 +1,22 @@
-# 🧠 MNIST Handwritten Digit Recognizer
+# MNIST Digit Recognizer (PyTorch + Streamlit)
 
-This project is a Streamlit-based web app that allows users to draw a digit (0–9) and get real-time predictions using a Convolutional Neural Network (CNN) trained on the MNIST dataset.
+A Streamlit app that lets users draw a digit (0–9) and predicts it using a trained PyTorch CNN model.
 
----
-
-## 📌 Assignment Objective
-
-> **Practical Assignment 2**:  
-> Build, train, and evaluate a machine learning or deep learning model for handwritten digit classification using the MNIST dataset.
-
----
-
-## 🚀 Features
-
-- Draw digits directly in the app
-- Predicts digits 0–9 using a trained CNN
-- "Clear Canvas" button to reset and try again
-- Live probability chart of all digit classes
-- Trains the model if not found (auto-saves it)
-
----
-
-## 🧠 Model Details
-
-- Framework: TensorFlow / Keras
-- Model type: Deep Learning (CNN)
-- Dataset: MNIST (60,000 training / 10,000 testing)
-- Input shape: 28x28 grayscale
-- Output: 10-class softmax (digits 0–9)
-
----
-
-## 🛠️ Technologies Used
-
+## 🔧 Tech Stack
 - Python
+- PyTorch
 - Streamlit
-- TensorFlow / Keras
-- NumPy
-- Pillow
 - streamlit-drawable-canvas
 
----
+## 🧠 How It Works
+- A Convolutional Neural Network (CNN) is trained on MNIST dataset.
+- The user draws a digit using a canvas.
+- The digit is processed, resized, and passed to the CNN model.
+- The model returns its prediction with confidence.
 
-## 📦 Installation
-
-1. Clone the repository:
+## 🚀 Run Locally
 
 ```bash
-git clone https://github.com/your-username/mnist-streamlit.git
-cd mnist-streamlit
+pip install -r requirements.txt
+python model.py      # train and save the model
+streamlit run app.py
